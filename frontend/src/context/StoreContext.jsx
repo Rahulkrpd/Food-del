@@ -7,7 +7,11 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
-    const url = "http://localhost:4000";
+
+    const [userName,setUserName]=useState("");
+
+    const url = "https://food-del-backend-6b79.onrender.com";
+    // const url = "http://localhost:4000";
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -47,10 +51,15 @@ const StoreContextProvider = (props) => {
         setFoodList(response.data.data);
     };
 
+    //http://localhost:4000/api/food/list
+
     const loadCartData = async (token) => {
         const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
         setCartItems(response.data.cartData);
+       
     };
+
+   // http://localhost:4000/api/cart/get
 
     useEffect(() => {
         async function loadData() {
@@ -73,7 +82,9 @@ const StoreContextProvider = (props) => {
         getTotalCartAmount,
         url,
         token,
-        setToken
+        setToken,
+        userName,
+        setUserName
     };
 
     return (

@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 const LoginPopUp = ({ setShowLogin }) => {
-  const { url, setToken } = useContext(StoreContext)
+  const { url, setToken ,setUserName} = useContext(StoreContext)
 
   const [currState, setCurrState] = useState("Sign up")
 
@@ -35,13 +35,18 @@ const LoginPopUp = ({ setShowLogin }) => {
     }
 
     const response = await axios.post(newUrl, data);
-    if (response) {
+    if (response.data.success) {
       setToken(response.data.token)
+      setUserName(response.data.name); 
+     console.log(response.data.name)
       localStorage.setItem("token", response.data.token)
+      localStorage.setItem("userName", response.data.name); // Store the user's name
       setShowLogin(false)
+      
     }
     else {
       alert(response.data.message)
+      console.log(response.message)
     }
 
   }

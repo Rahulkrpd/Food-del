@@ -21,6 +21,12 @@
     cursor: pointer;
 }
 
-.app-download-platforms img:hover{
+.app-download-platforms img:hover {
     transform: scale(1.05);
+}
+
+@media (max-width:750px) {
+    .app-download p {
+        font-size: 46px;
+    }
 }

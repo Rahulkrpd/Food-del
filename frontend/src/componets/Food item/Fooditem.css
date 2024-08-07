@@ -73,7 +73,28 @@
 
 }
 
-.food-item-counter img{
+.food-item-counter img {
     width: 30px;
 
+}
+
+@media (max-width: 600px) {
+    .food-item-desc {
+        font-size: 25px;
+    }
+
+    .food-item-price {
+        font-size: 40px;
+    }
+
+    .food-item-name-rating  p {
+        font-size: 39px;
+    }
+
+    .footer-content-center h2 {
+        
+    }
+    .footer-content-center li {
+        
+    }
 }

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam vitae omnis vero eveniet in ullam explicabo officiis doloribus cupiditate minima hic dolorum laborum, consequatur iusto? Quia ad labore vero?</p>
+          <p>we’re dedicated to delivering exceptional culinary experiences. Our diverse menu features fresh, high-quality ingredients prepared by expert chefs. From comforting classics to gourmet specialties, we aim to satisfy every craving. Whether it’s for a family gathering or a cozy evening, we ensure each meal is delicious and memorable. Celebrate great food and exceptional service with us. Thank you for choosing Tomato where every meal is a special occasion.</p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
             <img src={assets.twitter_icon} alt="" />
@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="footer-content-center">
           <h2>COMPANY</h2>
           <ul>
-            <li>Home</li>
+            <a href="#"><li>Home</li></a>
             <li>About us</li>
             <li>Delivery</li>
             <li>Privacy policy</li>
