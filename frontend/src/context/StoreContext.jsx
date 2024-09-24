@@ -10,7 +10,7 @@ const StoreContextProvider = (props) => {
 
     const [userName,setUserName]=useState("");
 
-    const url = "https://food-del-backend-6b79.onrender.com";
+    const url = "https://food-del-backend-24sk.onrender.com";
     // const url = "http://localhost:4000";
 
     const addToCart = async (itemId) => {
