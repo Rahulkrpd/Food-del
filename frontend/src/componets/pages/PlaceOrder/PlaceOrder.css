@@ -17,7 +17,7 @@
     margin-bottom: 50px;
 }
 
-.place-order-left input{
+.place-order-left input {
     margin-bottom: 15px;
     width: 100%;
     padding: 10px;
@@ -26,17 +26,25 @@
     outline-color: tomato;
 }
 
-.place-order-left .multi-fields{
-  display: flex;
-  gap: 10px;
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
 }
 
-.place-order-right{
+.place-order-right {
     width: 100%;
-    max-width: max(40%,500px);
+    max-width: max(40%, 500px);
+    margin: 1rem;
 
 }
 
-.place-order .cart-total button{
-    margin-top:30px ;
+.place-order .cart-total button {
+    margin-top: 30px;
+}
+
+@media (max-width:600px) {
+    .place-order {
+        margin: 1rem;
+    }
+
 }

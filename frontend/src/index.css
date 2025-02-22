@@ -5,24 +5,17 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
-
   scroll-behavior: smooth;
 
+
 }
 
-body {
-  min-width: 100vh;
-}
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.app {
-  width: 80vw;
-  margin: auto;
-}
 
 
 @keyframes fadeIn {

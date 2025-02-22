@@ -1,7 +1,9 @@
 .explore-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+    overflow-x:auto;
+    
 }
 
 .explore-menu h1 {
@@ -65,5 +67,18 @@
     .explore-menu-text {
         max-width: 100%;
         font-size: 14px;
+    }
+}
+
+
+@media (max-width:480px)
+{
+    .explore-menu{
+        /* background-color: red; */
+        width: 100vw;
+    }
+    .explore-menu-list{
+        /* width: 100vw; */
+        overflow-x: auto;
     }
 }

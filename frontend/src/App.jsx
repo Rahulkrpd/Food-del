@@ -8,22 +8,36 @@ import { useState } from "react"
 import LoginPopUp from "./componets/LoginPopUp/LoginPopUp"
 import Verify from "./componets/pages/Verify/Verify"
 import Myorder from "./componets/pages/Myorder/Myorder"
+import { useEffect } from "react"
 
 const App = () => {
     const [ showLogin,setShowLogin]= useState(false)
 
+   
+  useEffect(() => {
+    if (showLogin) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup when component unmounts
+    };
+  }, [showLogin]);
+
   return (
     <>
-     {showLogin? <LoginPopUp setShowLogin={setShowLogin}/>: <> </> }
+      {showLogin && <LoginPopUp setShowLogin={setShowLogin} />}
       <div className='app'>
         <Navbar  setShowLogin={setShowLogin} />
-        <Routes>
+       {  <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/myorders" element={<Myorder />} />
-        </Routes>
+        </Routes> }
       </div>
       <Footer />
     </>

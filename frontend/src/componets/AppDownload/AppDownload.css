@@ -27,6 +27,6 @@
 
 @media (max-width:750px) {
     .app-download p {
-        font-size: 46px;
+        font-size: 2rem;
     }
 }

@@ -78,23 +78,20 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .food-item-desc {
-        font-size: 25px;
+        font-size: 1rem;
     }
 
     .food-item-price {
-        font-size: 40px;
+        font-size: 2rem;
     }
 
-    .food-item-name-rating  p {
-        font-size: 39px;
+    .food-item-name-rating p {
+        font-size: clamp(28px, 2vw, 35px);
     }
 
-    .footer-content-center h2 {
-        
-    }
-    .footer-content-center li {
-        
+    .food-item-image {
+        width: 100vw
     }
 }

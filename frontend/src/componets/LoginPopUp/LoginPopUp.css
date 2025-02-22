@@ -76,9 +76,4 @@
 }
 
 
-@media (max-width: 600px) {
-    .login-popup {
-        width: 100vh; 
-        max-width: 100vh; 
-    }
-}
+
