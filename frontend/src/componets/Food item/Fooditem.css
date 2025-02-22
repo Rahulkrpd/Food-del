@@ -84,11 +84,11 @@
     }
 
     .food-item-price {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .food-item-name-rating p {
-        font-size: clamp(28px, 2vw, 35px);
+        font-size: clamp(20px, 2vw, 30px);
     }
 
     .food-item-image {
